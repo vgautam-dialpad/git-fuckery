@@ -1,0 +1,46 @@
+
+Actions
+- Transitive actions
+  - Interactions with inanimate objects
+    - Weapons (take)
+    - Non-weapons (move)
+    - Currency?
+  - Interactions with creatures (kill, caress)
+- Intransitive actions
+  - Motion (N, S, E, W, down, up)
+  - Game state-related
+
+Objects
+- Inanimate objects
+  - Weapons
+  - Non-weapons
+  - Light sources
+  - Potions
+- Creatures
+- Clues
+
+--
+
+Saving game state
+- Location
+- Health
+- Inventory
+
+--
+
+I am a person, I have health and an inventory - these don't have to be
+associated with me as a person?
+JungleObject class
+Inventory object is a list of JungleObjects
+Adding to inventory has to be a method in inventoriable objects of the
+JungleObject class
+CreatureClass
+Location class has x and y variables, a description, a list of what it contains
+The Map is a 2D array of locations
+
+Initialization:
+- Map
+- Creatures (type, location, special methods)
+- JungleObjects (type, location, special methods)
+- Inventory
+- Health
