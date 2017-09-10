@@ -36,7 +36,7 @@ Adding to inventory has to be a method in inventoriable objects of the
 JungleObject class
 CreatureClass
 Location class has x and y variables, a description, a list of what it contains
-The Map is a 2D array of locations
+The Map is a 2D array of locations?
 
 Initialization:
 - Map

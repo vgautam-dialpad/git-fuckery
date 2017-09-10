@@ -1,5 +1,7 @@
 
-# Attempt at a python parser
+"""
+Attempt at a simple recursive-descent parser in Python
+"""
 
 import re
 
