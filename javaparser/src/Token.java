@@ -1,20 +1,23 @@
 
 public class Token {
 
-	private String value;
 	private TokenType type;
 
-	public Token(String s, TokenType type) {
-		this.value = s;
+	public Token(TokenType type) {
 		this.type = type;
 	}
 
-	public String getValue() {
-		return value;
+  public String getTokenType() {
+		return type.name();
 	}
 
-	public TokenType getTokenType() {
-		return type;
+	public static Token tokenizable (String s) {
+		Token ret = OverrideToken.tokenizableAsOverride(s);
+		if (ret == null)
+		{
+			ret = GameplayToken.tokenizableAsGameplay(s);
+		}
+		return ret;
 	}
 
 }

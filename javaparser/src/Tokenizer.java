@@ -3,18 +3,21 @@ import java.util.LinkedList;
 
 public class Tokenizer {
 
-	private String[] tokens;
-	private LinkedList<GameToken> gametokens = new LinkedList<>();
-
 	public Tokenizer() {
 	}
 
-	public LinkedList<GameToken> tokenize(String line) {
+	public LinkedList<Token> tokenize(String line) {
 
 		String[] tokens = line.split("\\s+");
 
+		LinkedList<Token> gametokens = new LinkedList<Token>();
+
 		for (int i = 0; i < tokens.length; i++) {
-			System.out.println(tokens[i]);
+			Token gametoken = Token.tokenizable(tokens[i].toUpperCase());
+			if (gametoken != null) {
+				System.out.println("THIS IS A GAME TOKEN!!!!!!!!!");
+				gametokens.add(gametoken);
+			}
 		}
 
 		return gametokens;

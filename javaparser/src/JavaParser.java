@@ -12,9 +12,8 @@ public class JavaParser {
 			BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 			try {
 				String line = input.readLine();
-				Token override = parser.parse(tokenizer.tokenize(line));
-				if (override.getValue() == "quit")
-				{
+				OverrideToken override = parser.parseOverrides(tokenizer.tokenize(line));
+				if (override != null) {
 					quit = true;
 				}
 			}

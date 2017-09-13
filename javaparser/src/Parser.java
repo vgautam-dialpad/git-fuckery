@@ -6,11 +6,18 @@ public class Parser {
 	public Parser() {
 	}
 
-	public Token parse(LinkedList<GameToken> gametokens) {
+	public OverrideToken parseOverrides(LinkedList<Token> gametokens) {
 
-		Token ret = new Token("continue", TokenType.OVERRIDE);
 		// some parsing
-		return ret;
+
+		while (!gametokens.isEmpty()) {
+			Token curr = gametokens.pop();
+			if ((curr.getTokenType()).equals("OVERRIDE")) {
+				return (OverrideToken) curr;
+			}
+		}
+
+		return null;
 	}
 
 }
